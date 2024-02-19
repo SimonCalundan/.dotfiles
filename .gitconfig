@@ -1,2 +1,8 @@
 [user]
-	email = simonkcalundan@gmail.com
+	email = 112775651+SimonCalundan@users.noreply.github.com
+	name = SimonCalundan
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
