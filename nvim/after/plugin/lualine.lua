@@ -41,7 +41,7 @@ local function process_sections(sections)
         comp = { comp }
         section[id] = comp
       end
-      comp.separator = left and { right = '/' } or { left = '/' }
+      comp.separator = left and { right = '' } or { left = '' }
     end
   end
   return sections
@@ -56,7 +56,7 @@ local function search_result()
     return ''
   end
   local searchcount = vim.fn.searchcount { maxcount = 9999 }
-  return last_search .. '(' .. searchcount.current .. '/' .. searchcount.total .. ')'
+  return last_search .. '(' .. searchcount.current .. '' .. searchcount.total .. ')'
 end
 
 local function modified()
@@ -72,7 +72,7 @@ require('lualine').setup {
   options = {
     theme = 'tokyonight',
     component_separators = '',
-    section_separators = { left = '/', right = '/' },
+    section_separators = { left = '', right = '' },
   },
   sections = process_sections {
     lualine_a = { 'mode' },
