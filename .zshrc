@@ -109,13 +109,13 @@ zstyle ':vcs_info:git:*' formats '%b '
 
 function cdfzf() {
     # Find directories under ~/Desktop excluding hidden and node_modules
-    local dir="$(find ~/Desktop -type d -not -path '*/\.*' -not -path '*/node_modules/*' | fzf --preview 'ls {}')"
+    local dir="$(find ~/ -type d -not -path '*/\.*' -not -path '*/node_modules/*' | fzf --preview 'ls {}')"
     [ -d "$dir" ] && cd "$dir"
 }
 
 function ffzf() {
     # Find files under ~/Desktop excluding node_modules and preview with batcat
-    local file="$(find ~/Desktop -type f -not -path '*node_modules*' | fzf --preview 'batcat --style=numbers --color=always {}' || echo '')"
+    local file="$(find ~/ -type f -not -path '*node_modules*' | fzf --preview 'batcat --style=numbers --color=always {}' || echo '')"
     if [ -n "$file" ] && [ -f "$file" ]; then
         nvim "$file"
     else
