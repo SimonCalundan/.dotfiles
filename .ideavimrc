@@ -1,0 +1,121 @@
+" Cursor style
+set guicursor=
+
+" Enable cursor line
+set cursorline
+
+" enable surround commands 
+set surround
+
+" Enable line numbers and relative line numbers
+set number
+set relativenumber
+
+" Tab and indent settings
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+
+" Disable line wrapping
+set nowrap
+
+" Search settings
+set nohlsearch
+set incsearch
+
+" Enable true color support
+set termguicolors
+
+" Scrolling settings
+set scrolloff=8
+set signcolumn=yes
+
+" Append to isfname
+set isfname+=@-@
+
+" Faster update time
+set updatetime=50
+
+" Highlight the 80th column
+set colorcolumn=80
+
+" Set leader key
+let mapleader = " "
+
+" Visual mode line movement
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Normal mode J movement
+nnoremap J mzJ`z
+
+" Scroll half-page with cursor centering
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+" Search next/previous with cursor centering
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Paste over selected text without overwriting the register
+xnoremap <leader>p "_dP
+
+" Yank to system clipboard
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>Y "+Y
+
+" Delete without overwriting the register
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" Map <C-c> to behave like <Esc> in insert mode
+inoremap <C-c> <Esc>
+
+" Map <F13> to behave like <Esc> in visual and insert mode
+inoremap <F13> <Esc>
+vnoremap <F13> <Esc>
+xnoremap <F13> <Esc>
+
+" Disable 'Q' in normal mode
+nnoremap Q <nop>
+
+" Resize splits with arrow keys
+nnoremap <Left> :vertical resize +4<CR>
+nnoremap <Right> :vertical resize -4<CR>
+nnoremap <Up> :horizontal resize -4<CR>
+nnoremap <Down> :horizontal resize +4<CR>
+
+" Split window shortcuts
+nnoremap <leader>h :vsplit<CR><C-w>l
+nnoremap <leader>v :split<CR><C-w>j
+
+
+" Map f13 (capslock) to escape 
+map <F13> <Esc>
+
+" Map leader + pf to the Fuzzier action
+map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
+
+" Map leader + mf to the FuzzyMover action
+map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
+
+" Map leader + gf to the FuzzierVCS action
+map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
+
+" HarpoonIJ 
+nmap <leader>1 :action GotoHarpoon1<cr>
+nmap <leader>2 :action GotoHarpoon2<cr>
+nmap <leader>3 :action GotoHarpoon3<cr>
+nmap <leader>4 :action GotoHarpoon4<cr>
+
+nmap <C-e> :action ShowHarpoon<cr>
+nmap <leader>a :action AddToHarpoon<cr>
+
+" Map leader + f to format code 
+map <leader>f <action>(ReformatCode)
+
+" Map shift + l to view intention actions menu 
+map <S-l> <action>(ShowIntentionActions)
