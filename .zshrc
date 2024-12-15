@@ -4,6 +4,7 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export TERM=xterm-256color
+alias tmux='tmux -u'
 
 
 # Set name of the theme to load --- if set to "random", it will
