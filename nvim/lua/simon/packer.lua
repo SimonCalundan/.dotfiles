@@ -20,6 +20,20 @@ return require('packer').startup(function(use)
   })
   use 'theprimeagen/vim-be-good'
   use {
+    'sphamba/smear-cursor.nvim',
+    config = function()
+        require('smear_cursor').setup({
+            -- Default configuration
+            cursor_color = "#d3cdc3",  -- Optional: set cursor color
+            normal_bg = "#282828",     -- Optional: set background color
+            smear_between_buffers = true,
+            smear_between_neighbor_lines = true,
+            scroll_buffer_space = true,
+            legacy_computing_symbols_support = false,
+        })
+    end,
+}
+  use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
