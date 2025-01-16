@@ -129,6 +129,19 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+        position bottom
+        colors {
+                background #1e2030
+                statusline #ffffff
+                separator #4c566a
+
+                # border background text
+                focused_workspace  #2f334d #2f334d #ffffff
+                active_workspace   #1e2030 #1e2030 #ffffff
+                inactive_workspace #1e2030 #1e2030 #888888
+                urgent_workspace   #bf616a #bf616a #ffffff
+                binding_mode      #2f334d #2f334d #ffffff
+        }
 }
 
 # Start the network manager applet
