@@ -119,3 +119,7 @@ map <leader>f <action>(ReformatCode)
 
 " Map shift + l to view intention actions menu 
 map <S-l> <action>(ShowIntentionActions)
+
+" Comment mappings
+map gc <action>(CommentByLineComment)
+map gb <action>(CommentByBlockComment)
