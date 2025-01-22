@@ -156,7 +156,7 @@ return require('packer').startup(function(use)
     opts = {},
     config = function()
       -- Set colorscheme
-      vim.cmd("colorscheme tokyonight-moon")
+      vim.cmd("colorscheme tokyonight-night")
     end,
   }
   use 'tpope/vim-dadbod'
