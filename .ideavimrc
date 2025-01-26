@@ -123,3 +123,6 @@ map <S-l> <action>(ShowIntentionActions)
 " Comment mappings
 map gc <action>(CommentByLineComment)
 map gb <action>(CommentByBlockComment)
+
+" Map leader + s to search and replace
+map <leader>s :%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>
