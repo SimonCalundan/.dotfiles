@@ -1,6 +1,6 @@
 general {
         colors = true
-        interval = 5
+        interval = 1
         color_good = "#a3be8c"    # Light green for good status
         color_degraded = "#ebcb8b" # Yellow for warning
         color_bad = "#bf616a"      # Red for errors/bad status
@@ -61,5 +61,5 @@ volume master {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M"
+        format = "%Y-%m-%d %H:%M:%S"
 }
