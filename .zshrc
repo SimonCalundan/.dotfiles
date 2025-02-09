@@ -5,6 +5,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 export TERM=xterm-256color
 alias tmux='tmux -u'
+alias python=python3
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -127,6 +128,7 @@ function ffzf() {
 }
 
 
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 

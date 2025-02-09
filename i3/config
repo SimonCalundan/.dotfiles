@@ -23,7 +23,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # Lock  screen 
-bindsym $mod+Shift+p exec i3lock -c 222B45
+bindsym $mod+Shift+p exec i3lock -c 000000
 
 
 
