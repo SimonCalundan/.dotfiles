@@ -127,6 +127,10 @@ function ffzf() {
     fi
 }
 
+function fpdf() {
+    xdg-open "$(fzf)"
+}
+
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
