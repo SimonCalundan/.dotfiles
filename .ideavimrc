@@ -126,3 +126,9 @@ map gb <action>(CommentByBlockComment)
 
 " Map leader + s to search and replace
 map <leader>s :%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>
+
+" Map Ctrl+H/J/K/L to move between split windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
